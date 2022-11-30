@@ -1,0 +1,32 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.search {
+  padding: 2rem 5%;
+
+  &__text {
+    position: relative;
+    border: none;
+    color: var(--text);
+    background-color: var(--element);
+    width: 100%;
+    padding: 1.2rem 1.2rem 1.2rem 7.8rem;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-family: inherit;
+
+    &::placeholder {
+      color: var(--input);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.6rem;
+    padding: 1.3rem 1.3rem 1.3rem 3.3rem;
+    color: var(--text);
+  }
+}

@@ -13,13 +13,13 @@ const Header = ({ switchTheme }) => {
         <h1 className='header__title'>Where in the world?</h1>
       </Link>
       <div className="header__theme-container">
-        <FontAwesomeIcon
-          icon={!isDarkMode ? solidMoon : regularMoon}
-          className='header__theme-icon'
-        />
         <button
           className="header__theme-button"
           onClick={() => { setIsDarkMode(!isDarkMode); switchTheme() }}>
+          <FontAwesomeIcon
+            icon={!isDarkMode ? solidMoon : regularMoon}
+            className='header__theme-icon'
+          />
           Dark Mode
         </button>
       </div>
