@@ -1,0 +1,12 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+@mixin font-home-item() {
+  font-size: 1.4rem;
+}
+
+@mixin font-detail-page() {
+  font-size: 1.6rem;
+}
