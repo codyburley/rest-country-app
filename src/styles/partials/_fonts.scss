@@ -3,10 +3,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
-@mixin font-home-item() {
+@mixin font-copy() {
   font-size: 1.4rem;
+  font-weight: 300;
 }
 
-@mixin font-detail-page() {
+@mixin font-subheading() {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@mixin font-heading() {
   font-size: 1.6rem;
+  font-weight: 800;
 }

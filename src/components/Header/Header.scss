@@ -1,0 +1,40 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.header {
+  width: 100%;
+  background-color: var(--element);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 2;
+
+  &__link {
+    color: var(--text);
+  }
+
+  &__title {
+    @include font-heading;
+  }
+
+  &__theme-icon {
+    color: var(--text);
+    @include font-copy;
+    margin-right: 1rem;
+  }
+
+  &__theme-button {
+    background: none;
+    color: var(--text);
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    @include font-copy;
+  }
+}

@@ -14,8 +14,9 @@ html {
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  height: 100%;
+  height: 100vh;
   margin: 0;
+  background-color: var(--background);
 }
 
 a {
@@ -28,15 +29,17 @@ ul {
 }
 
 :root {
-  --element: $color-white-text-element;
-  --text: $color-light-blue-text;
-  --input: $color-light-grey-input;
-  --background: $color-light-grey-background;
+  --element: #ffffff;
+  --text: #111517;
+  --input: #858585;
+  --background: #fafafa;
+  --shadow: 0 0 4px rgb(170, 170, 170);
 }
 
 [data-theme='dark'] {
-  --element: $color-dark-blue-element;
-  --text: $color-white-text-element;
-  --input: $color-white-text-element;
-  --background: $color-dark-blue-background;
+  --element: #2b3945;
+  --text: #ffffff;
+  --input: #ffffff;
+  --background: #202c37;
+  --shadow: none;
 }
