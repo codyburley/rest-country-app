@@ -26,3 +26,17 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+:root {
+  --element: $color-white-text-element;
+  --text: $color-light-blue-text;
+  --input: $color-light-grey-input;
+  --background: $color-light-grey-background;
+}
+
+[data-theme='dark'] {
+  --element: $color-dark-blue-element;
+  --text: $color-white-text-element;
+  --input: $color-white-text-element;
+  --background: $color-dark-blue-background;
+}
