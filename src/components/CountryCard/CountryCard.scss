@@ -1,0 +1,32 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.country-card {
+  background-color: var(--element);
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+
+  &__container {
+    padding: 2rem 3rem 3rem;
+  }
+
+  &__flag {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 2rem;
+    @include font-heading;
+    color: var(--text);
+  }
+
+  &__copy {
+    @include font-copy;
+    color: var(--text);
+
+    &--bolding {
+      font-weight: 600;
+    }
+  }
+}
