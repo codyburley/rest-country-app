@@ -26,8 +26,6 @@ const App = () => {
     )
   }
 
-  console.log(countries)
-
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);

@@ -12,6 +12,7 @@ const Home = () => {
       <Search
         setSearchTerm={setSearchTerm}
         setRegionFilter={setRegionFilter}
+        regionFilter={regionFilter}
       />
       <CountriesList
         searchTerm={searchTerm}

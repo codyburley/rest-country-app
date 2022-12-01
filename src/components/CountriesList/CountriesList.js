@@ -5,17 +5,20 @@ import './CountriesList.scss';
 
 const CountriesList = ({ searchTerm, regionFilter }) => {
   const { countries } = useSelector(state => state.countryList)
-  console.log(countries)
 
   return (
     <section className='countries-list'>
       {countries.filter((val) => {
-        // If empty, return the whole list
+
+        if (regionFilter !== '' && searchTerm !== '') {
+          return val.region.toLocaleLowerCase().includes(regionFilter.toLocaleLowerCase()) && (val.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
+        } else if (regionFilter !== '') {
+          return val.region.toLocaleLowerCase().includes(regionFilter.toLocaleLowerCase())
+        }
+
         if (searchTerm === "") {
           return val
-        } else if (
-          // If search matches any fields, return that data
-          val.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+        } else if (val.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
           return val
         }
         return false;
