@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import useLocalStorage from 'use-local-storage';
 import Home from './pages/Home/Home';
+import Country from './pages/Country/Country';
 import Header from './components/Header/Header';
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
     )
   }
 
+  console.log(countries)
+
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
@@ -38,7 +41,7 @@ const App = () => {
       />
       <Routes>
         <Route path='/' element={<Home />} />
-        {/* <Route path='/country/:country_code' element={<Country />} /> */}
+        <Route path='/country/:alpha3Code' element={<Country />} />
       </Routes>
     </div>
   );
