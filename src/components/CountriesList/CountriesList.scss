@@ -8,4 +8,14 @@
   align-items: center;
   padding: 0 10%;
   gap: 3.6rem;
+
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 5%;
+  }
 }

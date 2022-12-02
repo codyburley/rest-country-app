@@ -5,4 +5,102 @@
 .country {
   min-height: 100vh;
   background-color: var(--background);
+  padding: 4rem 5%;
+
+  &__back {
+    box-shadow: var(--shadow);
+    @include font-copy;
+    padding: 0.8rem 2.4rem;
+    text-align: center;
+    background-color: var(--element);
+    color: var(--text);
+    border-radius: 4px;
+  }
+
+  &__back-icon {
+    margin-right: 1rem;
+  }
+
+  &__container {
+    margin-top: 8rem;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between
+    }
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+  }
+
+  &__flag {
+    width: 100%;
+    aspect-ratio: 16/10;
+
+    @include desktop {
+      width: 45%;
+    }
+  }
+
+  &__name {
+    @include font-heading;
+    color: var(--text);
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__copy {
+    @include font-copy;
+    color: var(--text);
+
+    &--bolding {
+      font-weight: 600;
+    }
+  }
+
+  &__border-wrapper {
+    @include desktop {
+      display: flex;
+      align-items: center
+    }
+  }
+
+  &__border-label {
+    @include font-subheading;
+    color: var(--text);
+    margin-bottom: 3rem;
+
+    @include desktop {
+      margin: 1.6rem 1rem 1.6rem 0;
+    }
+  }
+
+  &__border-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__border {
+    box-shadow: var(--shadow);
+    @include font-copy;
+    padding: 0.8rem 2.4rem;
+    background-color: var(--element);
+    color: var(--text);
+
+    @include desktop {
+      height: fit-content;
+    }
+  }
 }

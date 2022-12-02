@@ -7,6 +7,12 @@
   box-shadow: var(--shadow);
   border-radius: 4px;
   width: 100%;
+  width: 25rem;
+  height: 100%;
+
+  @include desktop {
+    width: 20%;
+  }
 
   &__container {
     padding: 2rem 3rem 3rem;
@@ -15,6 +21,7 @@
   &__flag {
     border-radius: 4px 4px 0 0;
     width: 100%;
+    aspect-ratio: 16/9;
   }
 
   &__title {

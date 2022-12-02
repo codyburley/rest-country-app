@@ -9,6 +9,15 @@
   gap: 3rem;
   position: relative;
 
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__container {
+    width: 40%;
+  }
+
   &__text {
     position: relative;
     border: none;
@@ -50,11 +59,19 @@
       visibility: visible;
       cursor: pointer;
     }
+
+    @include desktop {
+      width: auto;
+    }
   }
 
   &__filter-copy {
     color: var(--text);
     @include font-copy;
+
+    @include desktop {
+      margin-right: 3.6rem;
+    }
   }
 
   &__chevron {
