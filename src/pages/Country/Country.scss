@@ -32,6 +32,10 @@
 
   &__wrapper {
     margin-top: 4rem;
+
+    @include desktop {
+      margin-left: 8rem;
+    }
   }
 
   &__flag {
